@@ -1,0 +1,58 @@
+/* style.css for LillianLiu-CS185 */
+
+
+/* Template Styles */
+body {
+	background-image: url("images/BG-tealfloral.png"); /*tiles by default*/
+	padding: 0px 20px 5px 20px; /*top right bottom left*/
+}
+
+.header {
+	padding: 0px 0px 20px 0px;
+}
+.header > .title {
+	padding: 0px;
+	color: Teal;
+	text-align: center;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 20px;
+}
+.header > .nav-bar {
+	background-color: rgba(175,213,193,0.8);
+	padding: 5px 10px 5px 10px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 20px;
+	
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center; /*horizontal*/
+	align-items: center; /*vertical*/
+}
+.header > .nav-bar > .elem {
+	padding: 0px 20px 0px 20px;
+}
+
+.main-body {
+	background-color: rgba(211,229,220,0.7);
+	padding: 10px 10px 10px 10px;
+	font-family: Georgia, serif;
+	font-size: 16px;
+}
+
+
+/* Page-specific Styles */
+.main-body {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center; /*horizontal*/
+}
+.main-body > .elem {
+	padding: 5px 10px 5px 10px;
+}
+.main-body > .image {
+	
+}
+
+
