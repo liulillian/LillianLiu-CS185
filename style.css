@@ -1,7 +1,7 @@
 /* style.css for LillianLiu-CS185 */
 
 
-/* Template Styles */
+/* Site-Wide Styles */
 body {
 	background-image: url("images/BG-tealfloral.png"); /*tiles by default*/
 	padding: 0px 20px 5px 20px; /*top right bottom left*/
@@ -32,27 +32,43 @@ body {
 .header > .nav-bar > .elem {
 	padding: 0px 20px 0px 20px;
 }
+.header > .nav-bar > .image {
+	padding: 0px 0px 0px 0px;
+}
 
-.main-body {
+.body-block {
 	background-color: rgba(211,229,220,0.7);
 	padding: 10px 10px 10px 10px;
 	font-family: Georgia, serif;
-	font-size: 16px;
+	font-size: 17px;
+}
+.body-block > .elem {
+	padding: 5px 10px 5px 10px;
+}
+.body-block > .image {
+	
 }
 
 
 /* Page-specific Styles */
-.main-body {
+#intro {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
 	justify-content: center; /*horizontal*/
 }
-.main-body > .elem {
-	padding: 5px 10px 5px 10px;
-}
-.main-body > .image {
-	
+
+#main-about-me {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center; /*horizontal*/
 }
 
+#main-extlinks {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center; /*horizontal*/
+}
 
