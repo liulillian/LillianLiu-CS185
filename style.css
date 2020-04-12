@@ -42,15 +42,12 @@ body {
 	font-family: Georgia, serif;
 	font-size: 17px;
 }
-.body-block > .elem {
-	padding: 5px 10px 5px 10px;
-}
-.body-block > .image {
-	
+.body-block > .block-content {
+	padding: 0px 10px 0px 10px;
 }
 
 
-/* Page-specific Styles */
+/* Home */
 #intro {
 	display: flex;
 	flex-direction: row;
@@ -58,6 +55,20 @@ body {
 	justify-content: center; /*horizontal*/
 }
 
+
+/* Gallery */
+#photo-grid {
+	
+}
+
+
+/* Videos */
+#video-grid {
+	
+}
+
+
+/* About Me */
 #main-about-me {
 	display: flex;
 	flex-direction: row;
@@ -65,10 +76,20 @@ body {
 	justify-content: center; /*horizontal*/
 }
 
+
+/* External Links */
 #main-extlinks {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
-	justify-content: center; /*horizontal*/
+	justify-content: space-around; /*horizontal*/
 }
+#main-extlinks > .block-content {
+	padding: 0px 20px 0px 20px;
+	text-align: center;
+}
+
+
+
+
 
