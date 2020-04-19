@@ -11,14 +11,7 @@
     <body>
 		<div class="header">
 			<div class="title"><h1>Gallery</h1></div>
-			<div class="nav-bar">
-				<div class="elem image"><a href="index.html"><img src="images/lilysprite.png" alt="Pixel lily and lily pad logo."></a></div>
-				<div class="elem"><a href="index.html">Home</a></div>
-				<div class="elem"><a href="gallery.html">Gallery</a></div>
-				<div class="elem"><a href="videos.html">Videos</a></div>
-				<div class="elem"><a href="aboutme.html">About Me</a></div>
-				<div class="elem"><a href="links.html">Links</a></div>
-			</div>
+			<div id="nav-bar"></div>
 		</div>
 		
 		<div class="body-block">
@@ -50,4 +43,57 @@
 		</div>
 		
     </body>
+    
+    
+    <style type="text/css">
+        .image-grid > .image {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+        #photos {
+            display: grid;
+            grid-template-columns: 6fr 5fr 5fr;
+            grid-gap: 1rem;
+        }
+        #photo5 {
+            grid-column-start: 1;
+            grid-row: 1 / 8;
+        }
+        #photo4 {
+            grid-column-start: 1;
+            grid-row: 8 / 15;
+        }
+        #photo3 {
+            grid-column-start: 1;
+            grid-row: 15 / 22;
+        }
+        #photo1 {
+            grid-column-start: 2;
+            grid-row: 1 / 12;
+        }
+        #photo7 {
+            grid-column-start: 2;
+            grid-row: 12 / 21;
+        }
+        #photo6 {
+            grid-column-start: 3;
+            grid-row: 1 / 10;
+        }
+        #photo2 {
+            grid-column-start: 3;
+            grid-row: 10 / 24;
+        }
+        #artwork {
+            display: grid;
+            grid-template-columns: 2fr 2fr 3fr 2fr;
+            grid-gap: 1rem;
+        }
+    </style>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $("#nav-bar").load("nav-bar.html");
+    </script>
+
 </html>

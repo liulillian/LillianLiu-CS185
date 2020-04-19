@@ -11,14 +11,7 @@
     <body>
 		<div class="header">
 			<div class="title"><h1>About Me</h1></div>
-			<div class="nav-bar">
-				<div class="elem image"><a href="index.html"><img src="images/lilysprite.png" alt="Pixel lily and lily pad logo."></a></div>
-				<div class="elem"><a href="index.html">Home</a></div>
-				<div class="elem"><a href="gallery.html">Gallery</a></div>
-				<div class="elem"><a href="videos.html">Videos</a></div>
-				<div class="elem"><a href="aboutme.html">About Me</a></div>
-				<div class="elem"><a href="links.html">Links</a></div>
-			</div>
+			<div id="nav-bar"></div>
 		</div>
 		
 		<div class="body-block" id="main-about-me">
@@ -47,4 +40,20 @@
 		<br>
 		
     </body>
+    
+    
+    <style type="text/css">
+        #main-about-me {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $("#nav-bar").load("nav-bar.html");
+    </script>
+
 </html>

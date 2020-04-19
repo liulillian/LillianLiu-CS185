@@ -11,14 +11,7 @@
     <body>
 		<div class="header">
 			<div class="title"><h1>Videos</h1></div>
-			<div class="nav-bar">
-				<div class="elem image"><a href="index.html"><img src="images/lilysprite.png" alt="Pixel lily and lily pad logo."></a></div>
-				<div class="elem"><a href="index.html">Home</a></div>
-				<div class="elem"><a href="gallery.html">Gallery</a></div>
-				<div class="elem"><a href="videos.html">Videos</a></div>
-				<div class="elem"><a href="aboutme.html">About Me</a></div>
-				<div class="elem"><a href="links.html">Links</a></div>
-			</div>
+			<div id="nav-bar"></div>
 		</div>
 		
 		<div class="body-block">
@@ -35,7 +28,6 @@
 					<div class="video"><iframe width="500" height="315" src="https://www.youtube.com/embed/PNsmvW6r-hg" allowfullscreen></iframe></div>
 				</div>
 			</div>
-			<br>
 
 			<div class="body-block">
 				<div class="block-content">
@@ -43,7 +35,6 @@
 					<div class="video"><iframe width="500" height="315" src="https://www.youtube.com/embed/b3RSyC5EVEo" allowfullscreen></iframe></div>
 				</div>
 			</div>
-			<br>
 
 			<div class="body-block">
 				<div class="block-content">
@@ -51,7 +42,6 @@
 					<div class="video"><iframe width="500" height="315" src="https://www.youtube.com/embed/h7KLbnwn6Fs" allowfullscreen></iframe></div>
 				</div>
 			</div>
-			<br>
 		
 			<div class="body-block">
 				<div class="block-content">
@@ -59,7 +49,6 @@
 					<div class="video"><iframe width="500" height="315" src="https://www.youtube.com/embed/0YF8vecQWYs" allowfullscreen></iframe></div>
 				</div>
 			</div>
-			<br>
 
 			<div class="body-block">
 				<div class="block-content">
@@ -67,7 +56,6 @@
 					<div class="video"><iframe width="500" height="315" src="https://www.youtube.com/embed/iaHBg8E1o00" allowfullscreen></iframe></div>
 				</div>
 			</div>
-			<br>
 
 			<div class="body-block">
 				<div class="block-content">
@@ -75,8 +63,24 @@
 					<div class="video"><iframe width="500" height="315" src="https://www.youtube.com/embed/GdgsNe_e4gA" allowfullscreen></iframe></div>
 				</div>
 			</div>
-			<br>
 		</div>
 		
     </body>
+    
+    
+    <style type="text/css">
+        .video-grid {
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+    </style>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $("#nav-bar").load("nav-bar.html");
+    </script>
+
 </html>
