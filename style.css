@@ -48,6 +48,8 @@ body > br{
 }
 .body-block > .block-content {
 	padding: 0px 10px 0px 10px;
+    justify-self: center;
+    align-self: center;
 }
 
 

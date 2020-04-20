@@ -18,13 +18,13 @@
 			<div class="block-content">
 				<div class="section-title"><h2>Photos</h2></div>
 				<div class="image-grid" id="photos">
-					<img class="image" id="photo5" src="images/photo5.jpg" alt="A group photo from a hackathon.">
-					<img class="image" id="photo4" src="images/photo4.jpg" alt="A photo of a UCSB Reads table for an event.">
-					<img class="image" id="photo3" src="images/photo3.jpg" alt="A photo of students serving curry at a food festival.">
-					<img class="image" id="photo1" src="images/photo1.jpg" alt="A photo with a giant bag of Calbee shrimp chips.">
-					<img class="image" id="photo7" src="images/photo7.jpg" alt="A family photo at Dolby Theatre.">
-					<img class="image" id="photo6" src="images/photo6.jpg" alt="A group photo of students at UCSB.">
-					<img class="image" id="photo2" src="images/photo2.jpg" alt="A screenshot of the Google Arts & Culture mobile app.">
+					<img class="image horiz" id="photo5" src="images/photo5.jpg" alt="A group photo from a hackathon.">
+					<img class="image horiz" id="photo4" src="images/photo4.jpg" alt="A photo of a UCSB Reads table for an event.">
+					<img class="image horiz" id="photo3" src="images/photo3.jpg" alt="A photo of students serving curry at a food festival.">
+					<img class="image vert" id="photo1" src="images/photo1.jpg" alt="A photo with a giant bag of Calbee shrimp chips.">
+					<img class="image square" id="photo7" src="images/photo7.jpg" alt="A family photo at Dolby Theatre.">
+					<img class="image vert" id="photo2" src="images/photo2.jpg" alt="A screenshot of the Google Arts & Culture mobile app.">
+					<img class="image square" id="photo6" src="images/photo6.jpg" alt="A group photo of students at UCSB.">
 				</div>
 			</div>
 		</div>
@@ -46,50 +46,22 @@
     
     
     <style type="text/css">
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+            /* The above line from https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/ */
+            grid-gap: 1rem;
+        }
         .image-grid > .image {
-            width: 100%;
+            max-width: 100%;
             height: auto;
             object-fit: contain;
+            justify-self: center;
+            align-self: center;
         }
-        #photos {
-            display: grid;
-            grid-template-columns: 6fr 5fr 5fr;
-            grid-gap: 1rem;
-        }
-        #photo5 {
-            grid-column-start: 1;
-            grid-row: 1 / 8;
-        }
-        #photo4 {
-            grid-column-start: 1;
-            grid-row: 8 / 15;
-        }
-        #photo3 {
-            grid-column-start: 1;
-            grid-row: 15 / 22;
-        }
-        #photo1 {
-            grid-column-start: 2;
-            grid-row: 1 / 12;
-        }
-        #photo7 {
-            grid-column-start: 2;
-            grid-row: 12 / 21;
-        }
-        #photo6 {
-            grid-column-start: 3;
-            grid-row: 1 / 10;
-        }
-        #photo2 {
-            grid-column-start: 3;
-            grid-row: 10 / 24;
-        }
-        #artwork {
-            display: grid;
-            grid-template-columns: 2fr 2fr 3fr 2fr;
-            grid-gap: 1rem;
-        }
+        .image-grid > .vert { grid-row: span 2; }
     </style>
+    
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript">

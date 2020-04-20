@@ -15,7 +15,7 @@
 		</div>
 		
 		<div class="body-block" id="main-about-me">
-			<div class="block-content">
+			<div class="block-content text-section">
 				<div><h2>About Me</h2></div>
 				<div>
 					<p>As of April 2020, I am a fourth-year undergraduate Computer Engineering major at the University of California - Santa Barbara.</p>
@@ -24,7 +24,7 @@
 					<p>The most important thing to me is respect; when people respect one another, other good things follow. People can collaborate, or at least not get in each other's way, and people can learn from one another.</p>
 				</div>
 			</div>
-			<div class="elem image"><img src="images/photo0.jpg" alt="A portrait photo."></div>
+			<div class="block-content"><img class="image" src="images/photo0.jpg" alt="A portrait photo."></div>
 		</div>
 		<br>
 		
@@ -48,8 +48,21 @@
             flex-direction: row;
             flex-wrap: nowrap;
             justify-content: center;
+            align-items: center;
+        }
+        .text-section {
+            flex-shrink: 3;
+        }
+        .block-content > .image {
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
+            justify-self: center;
+            align-self: center;
+            flex-grow: 3;
         }
     </style>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript">
