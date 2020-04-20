@@ -10,7 +10,6 @@
 </head>
 <body>
     <div class="header">
-        <div class="title"><h1>Gallery</h1></div>
         <div id="nav-bar"></div>
     </div>
     
@@ -18,13 +17,13 @@
         <div class="block-content">
             <div class="section-title"><h2>Photos</h2></div>
             <div class="image-grid" id="photos">
-                <img class="image horiz" id="photo5" src="images/photo5.jpg" alt="A group photo from a hackathon.">
-                <img class="image horiz" id="photo4" src="images/photo4.jpg" alt="A photo of a UCSB Reads table for an event.">
-                <img class="image horiz" id="photo3" src="images/photo3.jpg" alt="A photo of students serving curry at a food festival.">
-                <img class="image vert" id="photo1" src="images/photo1.jpg" alt="A photo with a giant bag of Calbee shrimp chips.">
-                <img class="image square" id="photo7" src="images/photo7.jpg" alt="A family photo at Dolby Theatre.">
-                <img class="image vert" id="photo2" src="images/photo2.jpg" alt="A screenshot of the Google Arts & Culture mobile app.">
-                <img class="image square" id="photo6" src="images/photo6.jpg" alt="A group photo of students at UCSB.">
+                <img class="image horiz" id="photo5.jpg" src="images/photo5.jpg" alt="A group photo from a hackathon.">
+                <img class="image horiz" id="photo4.jpg" src="images/photo4.jpg" alt="A photo of a UCSB Reads table for an event.">
+                <img class="image horiz" id="photo3.jpg" src="images/photo3.jpg" alt="A photo of students serving curry at a food festival.">
+                <img class="image vert" id="photo1.jpg" src="images/photo1.jpg" alt="A photo with a giant bag of Calbee shrimp chips.">
+                <img class="image square" id="photo7.jpg" src="images/photo7.jpg" alt="A family photo at Dolby Theatre.">
+                <img class="image vert" id="photo2.jpg" src="images/photo2.jpg" alt="A screenshot of the Google Arts & Culture mobile app.">
+                <img class="image square" id="photo6.jpg" src="images/photo6.jpg" alt="A group photo of students at UCSB.">
             </div>
         </div>
     </div>
@@ -34,13 +33,15 @@
         <div class="block-content">
             <div class="section-title"><h2>Artwork</h2></div>
             <div class="image-grid" id="artwork">
-                <img class="image" id="art1" src="images/art1.png" alt="An Arcanine sticker design.">
-                <img class="image" id="art2" src="images/art2.png" alt="A moon rabbit sticker design.">
-                <img class="image" id="art3" src="images/art3.png" alt="A Toxel-themed rug design.">
-                <img class="image" id="art4" src="images/art4.gif" alt="A gif from Pursuivant, a game.">
+                <img class="image" id="art1.png" src="images/art1.png" alt="An Arcanine sticker design.">
+                <img class="image" id="art2.png" src="images/art2.png" alt="A moon rabbit sticker design.">
+                <img class="image" id="art3.png" src="images/art3.png" alt="A Toxel-themed rug design.">
+                <img class="image" id="art4.gif" src="images/art4.gif" alt="A gif from Pursuivant, a game.">
             </div>
         </div>
     </div>
+    
+    <div id="overlay" onclick="popupOff()"></div>
     
 </body>
 
@@ -48,11 +49,12 @@
 <style type="text/css">
     .image-grid {
         display: grid;
+        /* The following line from https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/ */
         grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
-        /* The above line from https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/ */
         grid-gap: 1rem;
     }
     .image-grid > .image {
+        cursor: pointer;
         max-width: 100%;
         height: auto;
         object-fit: contain;
@@ -60,6 +62,39 @@
         align-self: center;
     }
     .image-grid > .vert { grid-row: span 2; }
+    
+    /* from https://www.w3schools.com/howto/howto_css_overlay.asp */
+    #overlay {
+        cursor: pointer;
+        display: none;
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        background-color: rgba(0,0,0,0.5);
+    }
+    #popup {
+        pointer-events: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        height: 80%;
+        width: 80%;
+        text-align: center;
+    }
+    #popupImg {
+        pointer-events: auto;
+        position: absolute;
+        max-width: 100%;
+        max-height: 100%;
+        margin: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
 </style>
 
 
@@ -67,6 +102,40 @@
 <script type="text/javascript">
     $("#nav-bar").load("nav-bar.html");
     var currentTab = "Gallery";
+    
+    // Popup image
+    const parent1 = document.getElementById("photos");
+    const parent2 = document.getElementById("artwork");
+    let imageGroups = [parent1, parent2];
+    var parent;
+    for (iparent in imageGroups) {
+        parent = imageGroups[iparent];
+        var children = parent.childNodes;
+        for (var ichild = 0; ichild < children.length; ichild++) {
+            var child = children[ichild];
+            child.onclick = function popupOn(child) {
+                console.log("Ran popupOn()");
+                if (!document.body.contains(document.getElementById("popup"))) {
+                    document.getElementById("overlay").style.display = "block";
+                    var popup = document.createElement("div");
+                    popup.id = "popup";
+                    document.body.appendChild(popup);
+                    var popupImg = document.createElement("img");
+                    popupImg.id = "popupImg";
+                    popupImg.src = this.src;
+                    popupImg.alt = this.alt;
+                    popupImg.className = this.className;
+                    popup.appendChild(popupImg);
+                }
+            };
+        }
+    }
+    
+    function popupOff() {
+        document.getElementById("overlay").style.display = "none";
+        popup = document.getElementById("popup");
+        document.body.removeChild(popup);
+    }
 </script>
 
 </html>
