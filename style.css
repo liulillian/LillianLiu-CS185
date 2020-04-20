@@ -6,9 +6,6 @@ body {
 	background-image: url("images/BG-tealfloral.png");
 	padding: 0px 20px 5px 20px; /*top right bottom left*/
 }
-body > br{
-	
-}
 
 .header {
 	padding: 0px 0px 20px 0px;
@@ -19,25 +16,6 @@ body > br{
 	text-align: center;
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 20px;
-}
-
-.nav-bar {
-	background-color: rgba(175,213,193,0.8);
-	padding: 5px 10px 5px 10px;
-	font-family: Verdana, Geneva, sans-serif;
-	font-size: 20px;
-	
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center; /*horizontal*/
-	align-items: center; /*vertical*/
-}
-.nav-bar > .elem {
-	padding: 0px 20px 0px 20px;
-}
-.nav-bar > .image {
-	padding: 0px 0px 0px 0px;
 }
 
 .body-block {

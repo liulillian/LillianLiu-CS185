@@ -1,8 +1,51 @@
 <div class="nav-bar">
     <div class="elem image"><a href="index.html"><img src="images/lilysprite.png" alt="Pixel lily and lily pad logo."></a></div>
-    <div class="elem"><a href="index.html">Home</a></div>
-    <div class="elem"><a href="gallery.html">Gallery</a></div>
-    <div class="elem"><a href="videos.html">Videos</a></div>
-    <div class="elem"><a href="aboutme.html">About Me</a></div>
-    <div class="elem"><a href="links.html">Links</a></div>
+    <div class="elem" id="tabHome" onmouseover="highlightTab('Home')" onmouseout="unHighlightTab('Home')"><a href="index.html">Home</a></div>
+    <div class="elem" id="tabGallery" onmouseover="highlightTab('Gallery')" onmouseout="unHighlightTab('Gallery')"><a href="gallery.html">Gallery</a></div>
+    <div class="elem" id="tabVideos" onmouseover="highlightTab('Videos')" onmouseout="unHighlightTab('Videos')"><a href="videos.html">Videos</a></div>
+    <div class="elem" id="tabAboutMe" onmouseover="highlightTab('AboutMe')" onmouseout="unHighlightTab('AboutMe')"><a href="aboutme.html">About Me</a></div>
+    <div class="elem" id="tabLinks" onmouseover="highlightTab('Links')" onmouseout="unHighlightTab('Links')"><a href="links.html">Links</a></div>
 </div>
+
+
+<style type="text/css">
+    .nav-bar {
+        background-color: rgba(175,213,193,0.8);
+        padding: 0px 10px 0px 10px;
+        font-family: Verdana, Geneva, sans-serif;
+        font-size: 20px;
+        
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center; /*horizontal*/
+        align-items: center; /*vertical*/
+    }
+    .nav-bar > .elem {
+        padding: 7px 15px 7px 15px;
+        margin: 0px 5px 0px 5px;
+    }
+    .nav-bar > .image {
+        padding: 0px 0px 0px 0px;
+    }
+</style>
+
+
+<script type="text/javascript">
+    window.onload = function highlightCurrentTab() {
+        var tab = document.querySelector("#tab".concat(currentTab));
+        tab.style.backgroundColor = "rgba(211,229,220,1)";
+    }
+    function highlightTab(tabName) {
+        var tab = document.querySelector("#tab".concat(tabName));
+        tab.style.backgroundColor = "rgba(226,245,228,1)";
+    }
+    function unHighlightTab(tabName) {
+        var tab = document.querySelector("#tab".concat(tabName));
+        if (currentTab == tabName) {
+            tab.style.backgroundColor = "rgba(211,229,220,1)";
+        } else {
+            tab.style.backgroundColor = "rgba(0,0,0,0)";
+        }
+    }
+</script>
