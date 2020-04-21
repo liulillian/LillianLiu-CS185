@@ -7,6 +7,20 @@
     <title>Lillian Liu</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" href="style.css">
+    
+    <style type="text/css">
+        #main-extlinks {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+        }
+        #main-extlinks > .block-content {
+            padding: 0px 20px 0px 20px;
+            text-align: center;
+        }
+    </style>
+
 </head>
 <body>
     <div class="header">
@@ -27,30 +41,14 @@
             <div class="elem"><a href="https://gauchospace.ucsb.edu/courses/course/view.php?id=76596">CMPSC 185 Course Website</a></div> <br>
         </div>
     </div>
-    <br>
     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $("#nav-bar").load("nav-bar.html");
+        $("#backToTop").load("backToTop.html");
+        var currentTab = "Links";
+    </script>
+
 </body>
-
-
-<style type="text/css">
-    #main-extlinks {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-around;
-    }
-    #main-extlinks > .block-content {
-        padding: 0px 20px 0px 20px;
-        text-align: center;
-    }
-</style>
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script type="text/javascript">
-    $("#nav-bar").load("nav-bar.html");
-    $("#backToTop").load("backToTop.html");
-    var currentTab = "Links";
-</script>
 
 </html>

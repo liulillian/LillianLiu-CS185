@@ -7,6 +7,17 @@
     <title>Lillian Liu</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" href="style.css">
+    
+    <style type="text/css">
+        .video-grid {
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+    </style>
+
 </head>
 <body>
     <div class="header">
@@ -20,7 +31,6 @@
             <div><p>I don't have any personal videos for the public, but here are some public videos I like.</p></div>
         </div>
     </div>
-    <br>
     
     <div class="video-grid">
         <div class="body-block">
@@ -66,24 +76,13 @@
         </div>
     </div>
     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $("#nav-bar").load("nav-bar.html");
+        $("#backToTop").load("backToTop.html");
+        var currentTab = "Videos";
+    </script>
+
 </body>
-
-
-<style type="text/css">
-    .video-grid {
-        text-align: center;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-    }
-</style>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script type="text/javascript">
-    $("#nav-bar").load("nav-bar.html");
-    $("#backToTop").load("backToTop.html");
-    var currentTab = "Videos";
-</script>
 
 </html>

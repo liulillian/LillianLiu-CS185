@@ -7,6 +7,28 @@
     <title>Lillian Liu</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" href="style.css">
+    
+    <style type="text/css">
+        #main-about-me {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .text-section {
+            flex-shrink: 3;
+        }
+        .block-content > .image {
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
+            justify-self: center;
+            align-self: center;
+            flex-grow: 3;
+        }
+    </style>
+
 </head>
 <body>
     <div class="header">
@@ -27,7 +49,6 @@
         </div>
         <div class="block-content"><img class="image" src="images/photo0.jpg" alt="A portrait photo."></div>
     </div>
-    <br>
     
     <div class="body-block" id="hobbies">
         <div class="block-content">
@@ -38,38 +59,14 @@
             </div>
         </div>
     </div>
-    <br>
     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $("#nav-bar").load("nav-bar.html");
+        $("#backToTop").load("backToTop.html");
+        var currentTab = "AboutMe";
+    </script>
+
 </body>
-
-
-<style type="text/css">
-    #main-about-me {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: center;
-    }
-    .text-section {
-        flex-shrink: 3;
-    }
-    .block-content > .image {
-        max-width: 100%;
-        height: auto;
-        object-fit: contain;
-        justify-self: center;
-        align-self: center;
-        flex-grow: 3;
-    }
-</style>
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script type="text/javascript">
-    $("#nav-bar").load("nav-bar.html");
-    $("#backToTop").load("backToTop.html");
-    var currentTab = "AboutMe";
-</script>
 
 </html>

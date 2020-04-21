@@ -7,6 +7,59 @@
     <title>Lillian Liu</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" href="style.css">
+    
+    <style type="text/css">
+        .image-grid {
+            display: grid;
+            /* The following line from https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/ */
+            grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+            grid-gap: 1rem;
+        }
+        .image-grid > .image {
+            cursor: pointer;
+            border-radius: 10px;
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
+            justify-self: center;
+            align-self: center;
+        }
+        .image-grid > .vert { grid-row: span 2; }
+        
+        /* from https://www.w3schools.com/howto/howto_css_overlay.asp */
+        #overlay {
+            cursor: pointer;
+            display: none;
+            position: fixed;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            background-color: rgba(0,0,0,0.5);
+        }
+        #popup {
+            pointer-events: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            height: 80%;
+            width: 80%;
+            text-align: center;
+        }
+        #popupImg {
+            pointer-events: auto;
+            position: absolute;
+            max-width: 100%;
+            max-height: 100%;
+            margin: auto;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+    </style>
+
 </head>
 <body>
     <div class="header">
@@ -29,7 +82,6 @@
             </div>
         </div>
     </div>
-    <br>
     
     <div class="body-block">
         <div class="block-content">
@@ -45,100 +97,47 @@
     
     <div id="overlay" onclick="popupOff()"></div>
     
-</body>
-
-
-<style type="text/css">
-    .image-grid {
-        display: grid;
-        /* The following line from https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/ */
-        grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
-        grid-gap: 1rem;
-    }
-    .image-grid > .image {
-        cursor: pointer;
-        max-width: 100%;
-        height: auto;
-        object-fit: contain;
-        justify-self: center;
-        align-self: center;
-    }
-    .image-grid > .vert { grid-row: span 2; }
-    
-    /* from https://www.w3schools.com/howto/howto_css_overlay.asp */
-    #overlay {
-        cursor: pointer;
-        display: none;
-        position: fixed;
-        top: 0px;
-        right: 0px;
-        bottom: 0px;
-        left: 0px;
-        background-color: rgba(0,0,0,0.5);
-    }
-    #popup {
-        pointer-events: none;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        height: 80%;
-        width: 80%;
-        text-align: center;
-    }
-    #popupImg {
-        pointer-events: auto;
-        position: absolute;
-        max-width: 100%;
-        max-height: 100%;
-        margin: auto;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-    }
-</style>
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script type="text/javascript">
-    $("#nav-bar").load("nav-bar.html");
-    $("#backToTop").load("backToTop.html");
-    var currentTab = "Gallery";
-    
-    // Popup image
-    const parent1 = document.getElementById("photos");
-    const parent2 = document.getElementById("artwork");
-    let imageGroups = [parent1, parent2];
-    var parent;
-    for (iparent in imageGroups) {
-        parent = imageGroups[iparent];
-        var children = parent.childNodes;
-        for (var ichild = 0; ichild < children.length; ichild++) {
-            var child = children[ichild];
-            child.onclick = function popupOn(child) {
-                console.log("Ran popupOn()");
-                if (!document.body.contains(document.getElementById("popup"))) {
-                    document.getElementById("overlay").style.display = "block";
-                    var popup = document.createElement("div");
-                    popup.id = "popup";
-                    document.body.appendChild(popup);
-                    var popupImg = document.createElement("img");
-                    popupImg.id = "popupImg";
-                    popupImg.src = this.src;
-                    popupImg.alt = this.alt;
-                    popupImg.className = this.className;
-                    popup.appendChild(popupImg);
-                }
-            };
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $("#nav-bar").load("nav-bar.html");
+        $("#backToTop").load("backToTop.html");
+        var currentTab = "Gallery";
+        
+        // Popup image
+        const parent1 = document.getElementById("photos");
+        const parent2 = document.getElementById("artwork");
+        let imageGroups = [parent1, parent2];
+        var parent;
+        for (iparent in imageGroups) {
+            parent = imageGroups[iparent];
+            var children = parent.childNodes;
+            for (var ichild = 0; ichild < children.length; ichild++) {
+                var child = children[ichild];
+                child.onclick = function popupOn(child) {
+                    console.log("Ran popupOn()");
+                    if (!document.body.contains(document.getElementById("popup"))) {
+                        document.getElementById("overlay").style.display = "block";
+                        var popup = document.createElement("div");
+                        popup.id = "popup";
+                        document.body.appendChild(popup);
+                        var popupImg = document.createElement("img");
+                        popupImg.id = "popupImg";
+                        popupImg.src = this.src;
+                        popupImg.alt = this.alt;
+                        popupImg.className = this.className;
+                        popup.appendChild(popupImg);
+                    }
+                };
+            }
         }
-    }
-    
-    function popupOff() {
-        document.getElementById("overlay").style.display = "none";
-        popup = document.getElementById("popup");
-        document.body.removeChild(popup);
-    }
-</script>
+        
+        function popupOff() {
+            document.getElementById("overlay").style.display = "none";
+            popup = document.getElementById("popup");
+            document.body.removeChild(popup);
+        }
+    </script>
+
+</body>
 
 </html>
