@@ -1,10 +1,10 @@
 <div class="nav-bar">
     <a class="elem image" href="index.html"><img src="images/lilysprite.png" alt="Pixel lily and lily pad logo."></a>
-    <a class="elem" id="tabHome" onmouseover="highlightTab('Home')" onmouseout="unHighlightTab('Home')" href="index.html">Home</a>
-    <a class="elem" id="tabGallery" onmouseover="highlightTab('Gallery')" onmouseout="unHighlightTab('Gallery')" href="gallery.html">Gallery</a>
-    <a class="elem" id="tabVideos" onmouseover="highlightTab('Videos')" onmouseout="unHighlightTab('Videos')" href="videos.html">Videos</a>
-    <a class="elem" id="tabAboutMe" onmouseover="highlightTab('AboutMe')" onmouseout="unHighlightTab('AboutMe')" href="aboutme.html">About Me</a>
-    <a class="elem" id="tabLinks" onmouseover="highlightTab('Links')" onmouseout="unHighlightTab('Links')" href="links.html">Links</a>
+    <a class="elem" id="tabHome" href="index.html">Home</a>
+    <a class="elem" id="tabGallery" href="gallery.html">Gallery</a>
+    <a class="elem" id="tabVideos" href="videos.html">Videos</a>
+    <a class="elem" id="tabAboutMe" href="aboutme.html">About Me</a>
+    <a class="elem" id="tabLinks" href="links.html">Links</a>
 </div>
 
 
@@ -25,8 +25,14 @@
         padding: 10px 20px 10px 20px;
         margin: 0px 20px 0px 20px;
     }
+    .nav-bar > .elem:hover {
+        background-color: rgba(226,245,228,1);
+    }
     .nav-bar > .image {
         padding: 0px 0px 0px 0px;
+    }
+    .nav-bar > .image:hover {
+        background-color: rgba(0,0,0,0);
     }
 </style>
 
@@ -36,19 +42,5 @@
         var tab = document.querySelector("#tab".concat(currentTab));
         tab.style.backgroundColor = "rgba(211,229,220,1)";
         tab.style.fontWeight = "bold";
-    }
-    function highlightTab(tabName) {
-        var tab = document.querySelector("#tab".concat(tabName));
-        tab.style.backgroundColor = "rgba(226,245,228,1)";
-    }
-    function unHighlightTab(tabName) {
-        var tab = document.querySelector("#tab".concat(tabName));
-        if (currentTab == tabName) {
-            tab.style.backgroundColor = "rgba(211,229,220,1)";
-            tab.style.fontWeight = "bold";
-        } else {
-            tab.style.backgroundColor = "rgba(0,0,0,0)";
-            tab.style.fontWeight = "normal";
-        }
     }
 </script>

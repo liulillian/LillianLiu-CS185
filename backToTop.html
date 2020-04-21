@@ -1,0 +1,28 @@
+<!-- guided by https://www.w3schools.com/howto/howto_js_scroll_to_top.asp -->
+
+<button id="backToTopBtn" onclick="goTop()">Top</button>
+
+<style type="text/css">
+    #backToTopBtn {
+        position: fixed;
+        padding: 10px 20px 10px 20px;
+        bottom: 10%;
+        right: 5%;
+        background-color: rgba(175,213,193,1);
+        cursor: pointer;
+        font-family: Verdana, Geneva, sans-serif;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    #backToTopBtn:hover {
+        background-color: rgba(226,245,228,1);
+    }
+</style>
+
+
+<script type="text/javascript">
+    function highlightTab(tabName) {
+        var tab = document.querySelector("#tab".concat(tabName));
+        tab.style.backgroundColor = "rgba(226,245,228,1)";
+    }
+</script>
