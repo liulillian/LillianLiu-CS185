@@ -2,49 +2,71 @@
 
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Lillian Liu</title>
-		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-		<link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-		<div class="header">
-			<div class="title"><h1>Lillian Liu's Portfolio</h1></div>
-			<div class="nav-bar">
-				<div class="elem image"><a href="index.html"><img src="images/lilysprite.png" alt="Pixel lily and lily pad logo."></a></div>
-				<div class="elem"><a href="index.html">Home</a></div>
-				<div class="elem"><a href="gallery.html">Gallery</a></div>
-				<div class="elem"><a href="videos.html">Videos</a></div>
-				<div class="elem"><a href="aboutme.html">About Me</a></div>
-				<div class="elem"><a href="links.html">Links</a></div>
-			</div>
-		</div>
-		
-		<div class="body-block" id="intro">
-			<div class="block-content image"><img src="images/BG_tp.jpg" alt="A market aisle stocked with toilet paper."></div>
-			<div class="block-content">
-				<div class="section-title"><h2>Welcome to my portfolio website</h2></div>
-				<div>
-					<p>made for University of California - Santa Barbara, CMPSC 185, spring 2020. This site may not be much for now, but will continue to be developed over the next few weeks.</p>
-					<p>Feel free to explore the different pages. The Gallery contains photos of me, along with some of my artwork. The Videos page contains Youtube videos that I enjoy. You can learn more about me in the About Me page, or access my social media and external links in the Links page.</p>
-				</div>
-			</div>
-		</div>
-		<br>
-		
-		<div class="body-block" id="whats-new">
-			<div class="block-content">
-				<div class="section-title">
-					<div><h2>What's New</h2></div>
-					<div><p><i>Sunday April 12, 2020</i></p></div>
-				</div>
-				<div>
-					<p>Most page contents have now been filled out, though some styling changes can still be made for a better-looking website. The website has now been updated to Assignment 2's specifications.</p>
-				</div>
-			</div>
-		</div>
-		<br>
-		
-    </body>
+<head>
+    <meta charset="utf-8">
+    <title>Lillian Liu</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="style.css">
+    <style type="text/css">
+        #intro {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .text-section {
+            flex-shrink: 3;
+        }
+        .block-content > .image {
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
+            justify-self: center;
+            align-self: center;
+            flex-grow: 3;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="title"><h1>Lillian Liu's Portfolio</h1></div>
+        <div id="nav-bar"></div>
+    </div>
+    
+    <div id="backToTop"></div>
+    
+    <div class="body-block" id="intro">
+        <div class="block-content"><img class="image" src="images/BG_tp.jpg" alt="A market aisle stocked with toilet paper."></div>
+        <div class="block-content text-section">
+            <div class="section-title"><h2>Welcome to my portfolio website</h2></div>
+            <div>
+                <p>made for University of California - Santa Barbara, CMPSC 185, spring 2020. This site may not be much for now, but will continue to be developed over the next few weeks.</p>
+                <p>Feel free to explore the different pages. The Gallery contains photos of me, along with some of my artwork. The Videos page contains Youtube videos that I enjoy. You can learn more about me in the About Me page, or access my social media and external links in the Links page.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="body-block" id="whats-new">
+        <div class="block-content">
+            <div class="section-title">
+                <div><h2>What's New</h2></div>
+                <div><p><i>Monday April 20, 2020</i></p></div>
+            </div>
+            <div>
+                <p>Some Javascript functionality has been added. The images in the Gallery will expand when clicked, and a "back to top" button appears after scrolling down enough.</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $("#nav-bar").load("nav-bar.html");
+        $("#backToTop").load("backToTop.html");
+        var currentTab = "Home";
+    </script>
+
+</body>
+
+
 </html>

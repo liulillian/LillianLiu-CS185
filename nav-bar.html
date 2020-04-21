@@ -1,0 +1,46 @@
+<div class="nav-bar">
+    <a class="elem image" href="index.html"><img src="images/lilysprite.png" alt="Pixel lily and lily pad logo."></a>
+    <a class="elem" id="tabHome" href="index.html">Home</a>
+    <a class="elem" id="tabGallery" href="gallery.html">Gallery</a>
+    <a class="elem" id="tabVideos" href="videos.html">Videos</a>
+    <a class="elem" id="tabAboutMe" href="aboutme.html">About Me</a>
+    <a class="elem" id="tabLinks" href="links.html">Links</a>
+</div>
+
+<style type="text/css">
+    .nav-bar {
+        background-color: rgba(175,213,193,0.8);
+        padding: 0px 15px 0px 15px;
+        margin: 20px 0px 0px 0px;
+        border-radius: 15px;
+        font-family: Verdana, Geneva, sans-serif;
+        font-size: 20px;
+        
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center; /*horizontal*/
+        align-items: center; /*vertical*/
+    }
+    .nav-bar > .elem {
+        padding: 10px 20px 10px 20px;
+        margin: 0px 20px 0px 20px;
+    }
+    .nav-bar > .elem:hover {
+        background-color: rgba(226,245,228,1);
+    }
+    .nav-bar > .image {
+        padding: 0px 0px 0px 0px;
+    }
+    .nav-bar > .image:hover {
+        background-color: rgba(0,0,0,0);
+    }
+</style>
+
+<script type="text/javascript">
+    window.onload = function highlightCurrentTab() {
+        var tab = document.querySelector("#tab".concat(currentTab));
+        tab.style.backgroundColor = "rgba(211,229,220,1)";
+        tab.style.fontWeight = "bold";
+    }
+</script>

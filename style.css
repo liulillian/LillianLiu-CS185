@@ -3,11 +3,8 @@
 
 /* Site-Wide Styles */
 body {
-	background-image: url("images/BG-tealfloral.png"); /*tiles by default*/
+	background-image: url("images/BG-tealfloral.png");
 	padding: 0px 20px 5px 20px; /*top right bottom left*/
-}
-body > br{
-	
 }
 
 .header {
@@ -20,125 +17,18 @@ body > br{
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 20px;
 }
-.header > .nav-bar {
-	background-color: rgba(175,213,193,0.8);
-	padding: 5px 10px 5px 10px;
-	font-family: Verdana, Geneva, sans-serif;
-	font-size: 20px;
-	
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center; /*horizontal*/
-	align-items: center; /*vertical*/
-}
-.header > .nav-bar > .elem {
-	padding: 0px 20px 0px 20px;
-}
-.header > .nav-bar > .image {
-	padding: 0px 0px 0px 0px;
-}
 
 .body-block {
 	background-color: rgba(211,229,220,0.7);
 	padding: 10px 10px 10px 10px;
+    margin: 0px 0px 15px 0px;
+    border-radius: 15px;
 	font-family: Georgia, serif;
 	font-size: 17px;
 }
 .body-block > .block-content {
-	padding: 0px 10px 0px 10px;
+	padding: 0px 10px 5px 10px;
+    justify-self: center;
+    align-self: center;
 }
-
-
-/* Home */
-#intro {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: center; /*horizontal*/
-}
-
-
-/* Gallery */
-.image-grid > .image {
-	width: 100%;
-	height: auto;
-	object-fit: contain;
-}
-
-#photos { /* [TODO: later, replace with Javascript masonry] */
-	display: grid;
-	grid-template-columns: 6fr 5fr 5fr;
-	grid-gap: 1rem;
-}
-#photo5 {
-	grid-column-start: 1;
-	grid-row: 1 / 8;
-}
-#photo4 {
-	grid-column-start: 1;
-	grid-row: 8 / 15;
-}
-#photo3 {
-	grid-column-start: 1;
-	grid-row: 15 / 22;
-}
-#photo1 {
-	grid-column-start: 2;
-	grid-row: 1 / 12;
-}
-#photo7 {
-	grid-column-start: 2;
-	grid-row: 12 / 21;
-}
-#photo6 {
-	grid-column-start: 3;
-	grid-row: 1 / 10;
-}
-#photo2 {
-	grid-column-start: 3;
-	grid-row: 10 / 24;
-}
-
-#artwork {
-	display: grid;
-	grid-template-columns: 2fr 2fr 3fr 2fr;
-	grid-gap: 1rem;
-}
-
-
-/* Videos */
-.video-grid {
-	text-align: center;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-evenly; /*horizontal*/
-}
-
-
-/* About Me */
-#main-about-me {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: center; /*horizontal*/
-}
-
-
-/* External Links */
-#main-extlinks {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-around; /*horizontal*/
-}
-#main-extlinks > .block-content {
-	padding: 0px 20px 0px 20px;
-	text-align: center;
-}
-
-
-
-
 
