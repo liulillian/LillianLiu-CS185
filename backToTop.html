@@ -5,6 +5,7 @@
 <style type="text/css">
     #backToTopBtn {
         position: fixed;
+        display: none;
         padding: 10px 20px 10px 20px;
         bottom: 10%;
         right: 5%;
@@ -21,8 +22,18 @@
 
 
 <script type="text/javascript">
-    function highlightTab(tabName) {
-        var tab = document.querySelector("#tab".concat(tabName));
-        tab.style.backgroundColor = "rgba(226,245,228,1)";
+    window.onscroll = function showGoTop() {
+        var button = document.getElementById("backToTopBtn");
+        if (document.body.scrollTop > (window.innerHeight/4)
+          || document.documentElement.scrollTop > (window.innerHeight/4)) {
+            button.style.display = "block";
+        } else {
+            button.style.display = "none";
+        }
+    }
+    
+    function goTop() {
+        document.body.scrollTop = 0; //Safari
+        document.documentElement.scrollTop = 0; //Chrome, Firefox, IE, Opera
     }
 </script>
