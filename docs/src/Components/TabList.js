@@ -2,7 +2,7 @@
 import React, {Component} from 'react';
 import Tab from './Tab'
 
-export class TabList extends Component {
+export class TabList extends Component { //aka nav-bar
   render() {
     return (
       this.props.tabs.map((oneTab) => (
