@@ -1,17 +1,8 @@
-.nav-bar {
-  display: flex;
-}
-
-h2 {
-  padding: 5px;
-}
-
 /* style.css for LillianLiu-CS185 */
-
 
 /* Site-Wide Styles */
 body {
-	background-image: url("images/BG-tealfloral.png");
+	background-image: url("Components/images/BG-tealfloral.png");
 	padding: 0px 20px 5px 20px; /*top right bottom left*/
 }
 
@@ -39,4 +30,31 @@ body {
     justify-self: center;
     align-self: center;
 }
+
+
+/* nav-bar */
+
+
+
+
+/* Home */
+.Home > #intro {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.Home > .body-block > .text-section {
+  flex-shrink: 3;
+}
+.Home > .body-block > .block-content > .image {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  justify-self: center;
+  align-self: center;
+  flex-grow: 3;
+}
+
 

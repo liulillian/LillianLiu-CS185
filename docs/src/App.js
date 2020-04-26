@@ -20,8 +20,10 @@ export class App extends Component {
   render() {
     const tabs = [
       {id: 1, title: 'Home'},
-      {id: 2, title: 'Images'},
-      {id: 3, title: 'Videos'}
+      {id: 2, title: 'Gallery'},
+      {id: 3, title: 'Videos'},
+      {id: 4, title: 'AboutMe'},
+      {id: 5, title: 'Links'}
     ]
     return (
       <div className="body">

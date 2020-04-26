@@ -4,8 +4,36 @@ import React, {Component} from 'react';
 export class Home extends Component {
   render() {
     return (
-      <div>
-        <h1>Home</h1>
+      <div className="Home">
+        <div className="header">
+          <div className="title"><h1>Lillian Liu's Portfolio</h1></div>
+          <div id="nav-bar"></div>
+        </div>
+        
+        <div id="backToTop"></div>
+        
+        <div className="body-block" id="intro">
+          <div className="block-content"><img className="image" src={require("./images/BG_tp.jpg")} alt="A market aisle stocked with toilet paper." /></div>
+          <div className="block-content text-section">
+            <div className="section-title"><h2>Welcome to my portfolio website</h2></div>
+            <div>
+              <p>made for University of California - Santa Barbara, CMPSC 185, spring 2020. This site may not be much for now, but will continue to be developed over the next few weeks.</p>
+              <p>Feel free to explore the different pages. The Gallery contains photos of me, along with some of my artwork. The Videos page contains Youtube videos that I enjoy. You can learn more about me in the About Me page, or access my social media and external links in the Links page.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div className="body-block" id="whats-new">
+          <div className="block-content">
+            <div className="section-title">
+              <div><h2>What's New</h2></div>
+              <div><p><i>Monday April 20, 2020</i></p></div>
+            </div>
+            <div>
+              <p>Some Javascript functionality has been added. The images in the Gallery will expand when clicked, and a "back to top" button appears after scrolling down enough.</p>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
