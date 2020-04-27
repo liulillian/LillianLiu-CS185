@@ -5,8 +5,6 @@ export class Home extends Component {
   render() {
     return (
       <div className='Home'>
-      
-        <div id="backToTop"></div>
         
         <div className="body-block" id="intro">
           <div className="block-content"><img className="image" src={require("./images/BG_tp.jpg")} alt="A market aisle stocked with toilet paper." /></div>

@@ -7,7 +7,8 @@ export class Tab extends Component {
     if (this.props.tabInfo.id == this.props.activeTabId) {
       return {
         cursor: 'pointer',
-        backgroundColor: 'rgba(211,229,220,1)'
+        backgroundColor: 'rgba(211,229,220,1)',
+        fontWeight: 'bold'
       }
     } else {
       return {

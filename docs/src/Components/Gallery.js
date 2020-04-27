@@ -6,8 +6,6 @@ export class Gallery extends Component {
   render() {
     return (
       <div className='Gallery'>
-      
-        <div id="backToTop"></div>
         
         <SRLWrapper>
           <div className="body-block">

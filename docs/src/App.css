@@ -101,4 +101,15 @@ body {
 .image-grid > .vert { grid-row: span 2; }
 
 
+/* Videos */
+.video-grid {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+
+
 
