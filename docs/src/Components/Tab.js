@@ -2,21 +2,42 @@
 import React, {Component} from 'react';
 
 export class Tab extends Component {
-  addStyling = () => {
+  markActiveTab = () => {
+    console.log("triggered");
     if (this.props.tabInfo.id == this.props.activeTabId) {
-      return {backgroundColor: 'gray'}
+      return {
+        cursor: 'pointer',
+        backgroundColor: 'rgba(211,229,220,1)'
+      }
     } else {
-      return {backgroundColor: 'white'}
+      return {
+        cursor: 'pointer',
+        backgroundColor: 'rgba(0,0,0,0)'
+      }
     }
   }
+  
+  highlightTab = (event) => {
+    event.target.style.backgroundColor = 'rgba(226,245,228,1)';
+  }
+  unHighlightTab = (event) => {
+    if (this.props.tabInfo.id == this.props.activeTabId) {
+      event.target.style.backgroundColor = 'rgba(211,229,220,1)';
+    } else {
+      event.target.style.backgroundColor = 'rgba(0,0,0,0)';
+    }
+  }
+  
   render() {
     return (
       <div
         className='tab'
-        style={this.addStyling()}
+        style={this.markActiveTab()}
+        onMouseOver={(event) => this.highlightTab(event)}
+        onMouseOut={(event) => this.unHighlightTab(event)}
         onClick={this.props.changeTab.bind(this, this.props.tabInfo.id)}
       >
-        <h2>{this.props.tabInfo.title}</h2>
+        {this.props.tabInfo.title}
       </div>
     );
   }

@@ -4,12 +4,8 @@ import React, {Component} from 'react';
 export class Home extends Component {
   render() {
     return (
-      <div className="Home">
-        <div className="header">
-          <div className="title"><h1>Lillian Liu's Portfolio</h1></div>
-          <div id="nav-bar"></div>
-        </div>
-        
+      <div className='Home'>
+      
         <div id="backToTop"></div>
         
         <div className="body-block" id="intro">
@@ -34,6 +30,7 @@ export class Home extends Component {
             </div>
           </div>
         </div>
+        
       </div>
     );
   }

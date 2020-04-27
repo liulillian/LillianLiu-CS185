@@ -1,8 +1,11 @@
 //App.js
 import React, {Component} from 'react';
-import './App.css'
-import TabList from './Components/TabList'
-import Body from './Components/Body'
+import SimpleReactLightbox from 'simple-react-lightbox';
+import ScrollUpButton from 'react-scroll-up-button';
+import './App.css';
+import Header from './Components/Header';
+import TabList from './Components/TabList';
+import Body from './Components/Body';
 
 export class App extends Component {
   constructor() {
@@ -10,11 +13,12 @@ export class App extends Component {
     this.state = {
       activeTabId: 1
     }
-    this.changeTab = (tabId) => {
-      this.setState({
-        activeTabId: tabId
-      })
-    } 
+  }
+  
+  changeTab = (tabId) => {
+    this.setState({
+      activeTabId: tabId
+    })
   }
   
   render() {
@@ -27,16 +31,30 @@ export class App extends Component {
     ]
     return (
       <div className="body">
-        <div className="nav-bar">
-          <TabList
-            tabs={tabs}
-            changeTab={this.changeTab}
-            activeTabId={this.state.activeTabId}
-          />
-        </div>
-        <div className="main-body">
-          <Body activeTabId={this.state.activeTabId}/>
-        </div>
+        <SimpleReactLightbox>
+          <div className="header">
+            <Header className="header" activeTabId={this.state.activeTabId} />
+          </div>
+          <div className="nav-bar">
+            <img
+              className="elem image"
+              src={require("./Components/images/lilysprite.png")}
+              alt="Pixel lily and lily pad logo."
+              onClick={() => this.changeTab(1)}
+              style={{cursor:'pointer'}}
+            />
+            <TabList
+              tabs={tabs}
+              changeTab={this.changeTab}
+              activeTabId={this.state.activeTabId}
+            />
+          </div>
+          <div className="main-body">
+            <Body activeTabId={this.state.activeTabId} />
+          </div>
+        </SimpleReactLightbox>
+        
+        <ScrollUpButton/>
       </div>
     );
   }
