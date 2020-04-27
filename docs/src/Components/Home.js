@@ -21,10 +21,10 @@ export class Home extends Component {
           <div className="block-content">
             <div className="section-title">
               <div><h2>What's New</h2></div>
-              <div><p><i>Monday April 20, 2020</i></p></div>
+              <div><p><i>Sunday April 26, 2020</i></p></div>
             </div>
             <div>
-              <p>Some Javascript functionality has been added. The images in the Gallery will expand when clicked, and a "back to top" button appears after scrolling down enough.</p>
+              <p>The entire site has been rebuilt using ReactJS. Enjoy the smoother tab transitions!</p>
             </div>
           </div>
         </div>
