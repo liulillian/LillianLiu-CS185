@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/LillianLiu-CS185/static/css/main.0474057e.chunk.css",
+    "main.js": "/LillianLiu-CS185/static/js/main.6dfd1a5a.chunk.js",
+    "main.js.map": "/LillianLiu-CS185/static/js/main.6dfd1a5a.chunk.js.map",
+    "runtime-main.js": "/LillianLiu-CS185/static/js/runtime-main.a316ce34.js",
+    "runtime-main.js.map": "/LillianLiu-CS185/static/js/runtime-main.a316ce34.js.map",
+    "static/js/2.41f73092.chunk.js": "/LillianLiu-CS185/static/js/2.41f73092.chunk.js",
+    "static/js/2.41f73092.chunk.js.map": "/LillianLiu-CS185/static/js/2.41f73092.chunk.js.map",
+    "index.html": "/LillianLiu-CS185/index.html",
+    "precache-manifest.7b0f5f96c2f7af6b647c5684b106ee92.js": "/LillianLiu-CS185/precache-manifest.7b0f5f96c2f7af6b647c5684b106ee92.js",
+    "service-worker.js": "/LillianLiu-CS185/service-worker.js",
+    "static/css/main.0474057e.chunk.css.map": "/LillianLiu-CS185/static/css/main.0474057e.chunk.css.map",
+    "static/js/2.41f73092.chunk.js.LICENSE.txt": "/LillianLiu-CS185/static/js/2.41f73092.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/LillianLiu-CS185/static/media/BG-tealfloral.6dcc1830.png",
+    "static/media/BG_tp.jpg": "/LillianLiu-CS185/static/media/BG_tp.9d0630db.jpg",
+    "static/media/art1.png": "/LillianLiu-CS185/static/media/art1.4dcd2f24.png",
+    "static/media/art2.png": "/LillianLiu-CS185/static/media/art2.2da86e31.png",
+    "static/media/art3.png": "/LillianLiu-CS185/static/media/art3.7ca26466.png",
+    "static/media/art4.gif": "/LillianLiu-CS185/static/media/art4.573587b3.gif",
+    "static/media/photo0.jpg": "/LillianLiu-CS185/static/media/photo0.68bd48e7.jpg",
+    "static/media/photo1.jpg": "/LillianLiu-CS185/static/media/photo1.836cdb71.jpg",
+    "static/media/photo2.jpg": "/LillianLiu-CS185/static/media/photo2.3334f86c.jpg",
+    "static/media/photo3.jpg": "/LillianLiu-CS185/static/media/photo3.b44de0e8.jpg",
+    "static/media/photo4.jpg": "/LillianLiu-CS185/static/media/photo4.f4b0139c.jpg",
+    "static/media/photo5.jpg": "/LillianLiu-CS185/static/media/photo5.be1f2b1a.jpg",
+    "static/media/photo6.jpg": "/LillianLiu-CS185/static/media/photo6.598f2449.jpg",
+    "static/media/photo7.jpg": "/LillianLiu-CS185/static/media/photo7.fa3b1eca.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a316ce34.js",
+    "static/js/2.41f73092.chunk.js",
+    "static/css/main.0474057e.chunk.css",
+    "static/js/main.6dfd1a5a.chunk.js"
+  ]
+}
