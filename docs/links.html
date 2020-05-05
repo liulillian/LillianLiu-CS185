@@ -1,0 +1,54 @@
+<!-- index.html for LillianLiu-CS185 -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Lillian Liu</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="style.css">
+    
+    <style type="text/css">
+        #main-extlinks {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+        }
+        #main-extlinks > .block-content {
+            padding: 0px 20px 0px 20px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="header">
+        <div id="nav-bar"></div>
+    </div>
+    
+    <div id="backToTop"></div>
+    
+    <div class="body-block" id="main-extlinks">
+        <div class="block-content">
+            <div><h2>Social Media</h2></div>
+            <div class="elem"><a href="https://www.facebook.com/lillian.liu.3532">Facebook</a></div> <br>
+            <div class="elem"><a href="https://www.linkedin.com/in/lillian-liu-657748171/">LinkedIn</a></div> <br>
+        </div>
+        <div class="block-content">
+            <div><h2>External Links</h2></div>
+            <div class="elem"><a href="https://github.com/liulillian/LillianLiu-CS185">Site GitHub</a></div> <br>
+            <div class="elem"><a href="https://gauchospace.ucsb.edu/courses/course/view.php?id=76596">CMPSC 185 Course Website</a></div> <br>
+        </div>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $("#nav-bar").load("nav-bar.html");
+        $("#backToTop").load("backToTop.html");
+        var currentTab = "Links";
+    </script>
+
+</body>
+
+</html>
